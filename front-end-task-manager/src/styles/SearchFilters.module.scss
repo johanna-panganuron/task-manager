@@ -1,0 +1,70 @@
+// src/styles/SearchFilters.module.scss
+.searchFilters {
+    margin-bottom: 1.5rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .searchInput {
+    flex: 1;
+    min-width: 250px;
+    padding: 0.75rem 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    height: 2.75rem;
+    box-sizing: border-box;
+    transition: all 0.2s ease;
+  
+    &:focus {
+      outline: none;
+      border-color: #623669;
+      box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    }
+  
+    &::placeholder {
+      color: #9ca3af;
+    }
+  }
+  
+  .filterSelect {
+    position: relative;
+    padding: 0.75rem 2.5rem 0.75rem 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    height: 2.75rem;
+    box-sizing: border-box;
+    background-color: white;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+    background-position: right 0.5rem center;
+    background-repeat: no-repeat;
+    background-size: 1.5em 1.5em;
+    cursor: pointer;
+    min-width: 150px;
+    appearance: none;
+    transition: all 0.2s ease;
+  
+    &:focus {
+      outline: none;
+      border-color: #623669;
+      box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.1);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .searchFilters {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
+    .searchInput {
+      min-width: unset;
+    }
+  
+    .filterSelect {
+      min-width: unset;
+    }
+  }
